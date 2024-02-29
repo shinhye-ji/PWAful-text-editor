@@ -1,18 +1,18 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
 // Add and configure workbox plugins for a service worker and manifest file.
-
-
 module.exports = () => {
   return {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
+      database: './src/js/database.js',
+      editor: './src/js/editor.js',
+      header: './src/js/header.js'
     },
     output: {
       filename: '[name].bundle.js',
@@ -22,23 +22,23 @@ module.exports = () => {
 
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Contact Cards'
+        title: 'JATE'
       }),
-      new MiniCssExtractPlugin(),
+
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
 
       new WebpackPwaManifest({
-        start_url: '/',
         fingerprints: false,
         inject: true,
-        name: 'Jate',
+        name: 'Just Another Text Editor',
+        short_name: 'JATE',
         description: 'I dunno what is jate??',
         background_color: '#225ca3',
         theme_color: '#225ca3',
-        
+        start_url: '/',
         publicPath: '/',
         icons: [
           {

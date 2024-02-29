@@ -1,39 +1,32 @@
 # PWAful-text-editor
 
-<!-- GIVEN a text editor web application
-WHEN I open my application in my editor
-THEN I should see a client server folder structure -->
+## User Story
 
-<!-- WHEN I run `npm run start` from the root directory
-THEN I find that my application should start up the backend and serve the client -->
+AS A developer\
+I WANT to create notes or code snippets with or without an internet connection\
+SO THAT I can reliably retrieve them for later use
 
-<!-- WHEN I run the text editor application from my terminal
-THEN I find that my JavaScript files have been bundled using webpack -->
+## Description
 
-<!-- WHEN I run my webpack plugins
-THEN I find that I have a generated HTML file, service worker, and a manifest file -->
+In this repository, you will find the source code for a text editor web application. It contains a client folder, which holds the front end application and logic as well as the JavaScript files needed for the application to work. You will also find a server folder that contains boilerplate code for the server to connect. 
 
-<!-- WHEN I use next-gen JavaScript in my application
-THEN I find that the text editor still functions in the browser without errors -->
+## Technologies Used
 
-<!-- WHEN I open the text editor
-THEN I find that IndexedDB has immediately created a database storage -->
-<!-- 
-WHEN I enter content and subsequently click off of the DOM window
-THEN I find that the content in the text editor has been saved with IndexedDB -->
+HTML\
+CSS\
+JS\
+Node.js\
+Webpack\
+JSON
 
-WHEN I reopen the text editor after closing it
-THEN I find that the content in the text editor has been retrieved from our 
-IndexedDB
+## Screenshots
 
-WHEN I click on the Install button
-THEN I download my web application as an icon on my desktop
+![img](./images/Screenshot%202024-02-28%20202647.png)
 
-WHEN I load my web application
-THEN I should have a registered service worker using workbox
+## Contact
 
-WHEN I register a service worker
-THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
+[GitHub](https://github.com/shinhye-ji)
 
-WHEN I deploy to Render
-THEN I should have proper build scripts for a webpack application
+## Live Link
+
+[Live Link]()
